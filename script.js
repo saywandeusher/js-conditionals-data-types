@@ -11,18 +11,12 @@
 // Write your solution below.
 // ====================================================================
 
-
-
-
-
-
-
-
-
-
-
-
-
+var num1 = prompt("Input 1st number.")
+var num2 = prompt("Input 2nd number.")
+function diff(x,y){
+	return Math.abs(x - y)
+}
+console.log(diff(num1,num2))
 
 // ========================== Exercise 2 ==============================
 // Prompt the user for a number, then console.log its ordinal version.
@@ -37,21 +31,26 @@
 // Write your solution below
 // ====================================================================
 
+var num = prompt("Input number.")
+function ordinal(i){
+	var j = i % 10,
+		k = i % 100;
+	if (j == 1 && k != 11){
+		return i + "st";
+	}
+	else if (j == 2 && k != 12){
+		return i + "nd";
+	}
+	else if (j == 3 && k != 13){
+		return i + "rd";
+	}else{
+		return i + "th";
+	}
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(ordinal(num))
+console.log(11%100)
 
 // ========================== Exercise 3 =================================
 // Generate a random integer (hint: search Google or MDN) between 1 to 10.
@@ -60,21 +59,22 @@
 // =======================================================================
 // Write your solution below.
 // =======================================================================
+function randomInteger(min, max){
+	return Math.floor(Math.random()*(max - min + 1)) + min;
+}
 
+var x = randomInteger(1,10);
+var input = prompt("Input an integer between 1-10.")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+if (x == input){
+	console.log(x)
+	console.log(input)
+	console.log("Your number matched!")
+}else{
+	console.log(x)
+	console.log(input)
+	console.log("Try again.")
+}
 
 // ========================== Exercise 4 ===============================
 // Generate a random string of length 6 alphanumeric characters.
@@ -88,23 +88,6 @@
 // =====================================================================
 // Write your solution below.
 // =====================================================================
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // ========================== Exercise 5 ==============================
